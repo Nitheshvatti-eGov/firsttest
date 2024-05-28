@@ -1,0 +1,58 @@
+{
+  "key": "com.smartbear.zephyr-scale-ai-dev",
+  "name": "Scale AI",
+  "description": "Zephyr Tenant Service",
+  "baseUrl": "https://app.tm4j-dev.smartbear.com/tenant",
+  "enableLicensing": false,
+  "authentication": {
+    "type": "JWT"
+  },
+  "vendor": {
+    "name": "SmartBear",
+    "url": "https://smartbear.com"
+  },
+  "lifecycle": {
+    "installed": "/lifecycle/installed"
+  },
+  "scopes": [
+    "READ",
+    "WRITE",
+    "ACT_AS_USER"
+  ],
+  "links": {},
+  "modules": {
+    "webItems": [
+      {
+        "key": "scale-ai-admin-item",
+        "name": {
+          "value": "Scale AI Admin Page"
+        },
+        "url": "/connect/admin",
+        "location": "admin_plugins_menu/scale-ai-admin-section",
+        "weight": 100,
+        "tooltip": {
+          "value": "Scale AI Admin Page"
+        },
+        "context": "ADDON"
+      }
+    ],
+    "webSections": [
+      {
+        "key": "scale-ai-admin-section",
+        "name": {
+          "value": "Scale AI"
+        },
+        "location": "admin_plugins_menu",
+        "weight": 100,
+        "tooltip": {
+          "value": "Scale AI"
+        }
+      }
+    ]
+  },
+  "apiMigrations": {
+    "gdpr": true,
+    "context-qsh": true,
+    "signed-install": true
+  }
+}
